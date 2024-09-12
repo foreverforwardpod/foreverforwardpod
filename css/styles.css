@@ -1,0 +1,599 @@
+/* General Reset for Body and HTML */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+header .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Main Navigation Styles */
+/* Main Navigation Styles */
+.main-nav {
+    background-color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative; /* Original position */
+    transition: position 0.3s ease-in-out; /* Smooth transition when changing position */
+    width: 100%; /* Ensure it spans the full width */
+    white-space: nowrap; /* Prevent line breaks for navigation items */
+}
+
+.main-nav.fixed {
+    position: fixed; /* Fixed position when scrolled */
+    top: 0; /* Stick to the top */
+    left: 0;
+    right: 0; /* Ensure it spans the full width */
+    z-index: 1000; /* Ensure it stays above other content */
+    background-color: #fff; /* Ensure background color remains consistent */
+}
+
+/* Ensure navigation list items stay in a single line */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex; /* Use inline-flex to align items horizontally */
+}
+
+.main-nav ul li {
+    display: inline; /* Make list items inline to allow horizontal scrolling */
+    margin: 0 20px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    display: inline-block; /* Ensure links are inline-block to respect padding */
+}
+
+.main-nav ul li a:hover {
+    background-color: #ffffff;
+    color: #333;
+    border-bottom: 2px solid black;
+    transform: scale(1.05);
+}
+
+.main-nav ul li a:active {
+    background-color: #ffffff;
+    transform: scale(0.98);
+}
+
+
+/* Hero Section Styles */
+.hero {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.hero p {
+    font-size: 24px;
+    color: #666;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 1s forwards;
+}
+
+/* Button Styles */
+.hero-button {
+    display: inline-block;
+    padding: 30px 60px;
+    font-size: 27px;
+    color: #fff;
+    background-color: rgb(27, 39, 53);
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 30px;
+}
+
+.hero-button:hover {
+    background-color: rgb(132, 140, 154);
+    transform: scale(1.05);
+}
+
+.hero-button:active {
+    background-color: rgb(20, 30, 40);
+    transform: scale(0.98);
+}
+
+/* Animation for fading in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    padding-bottom: 80px;
+    min-height: calc(100vh - 160px);
+}
+
+/* Section Styles */
+.latest-episode, .blog-preview, .recent-episodes, .merch {
+    margin-bottom: 20px;
+}
+
+.episode, .blog-post, .episode-item, .merch-item {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.episode audio, .merch-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Recent Episodes Section Styles */
+.recent-episodes {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.recent-episodes h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.episode-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.episode-item {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.episode-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.episode-item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Merch Section Styles */
+.merch {
+    background-color: #fff;
+    padding: 120px 60px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.merch h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.merch-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.merch-item {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Ensure consistent image size */
+.merch-item img {
+    width: 100%; /* Full width of the container */
+    max-width: 300px; /* Max width for uniform sizing */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.merch-item h3 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.merch-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Update Buy Now Button Styles */
+.merch-item a {
+    display: block;
+    width: calc(100% - 20px); /* Account for padding in container */
+    padding: 15px; /* Increased padding for better button height */
+    font-size: 20px; /* Larger font size for better readability */
+    color: #fff;
+    background-color: rgb(27, 39, 53);
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center; /* Center text within button */
+    margin-top: 15px; /* Space above the button */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.merch-item a:hover {
+    background-color: rgb(132, 140, 154);
+    transform: scale(1.05);
+}
+
+.merch-item a:active {
+    background-color: rgb(20, 30, 40);
+    transform: scale(0.98);
+}
+
+
+
+/* Access All Episodes Button Styles */
+.access-episodes-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgb(27, 39, 53);
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.access-episodes-button:hover {
+    background-color: rgb(132, 140, 154);
+    transform: scale(1.05);
+}
+
+.access-episodes-button:active {
+    background-color: rgb(20, 30, 40);
+    transform: scale(0.98);
+}
+
+/* Footer Styles */
+footer {
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-form h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(27, 39, 53);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgb(27, 39, 53);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(27, 39, 53);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+    background-color: rgb(132, 140, 154);
+    transform: scale(1.05);
+}
+
+.submit-button:active {
+    background-color: rgb(20, 30, 40);
+    transform: scale(0.98);
+}
+
+
+/* Back Button Styles */
+.go-back {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 18px;
+    color: #fff; /* Text color for the button */
+    text-decoration: none;
+    background-color: rgb(27, 39, 53); /* Background color to match your button color */
+    padding: 10px 20px;
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.go-back:hover {
+    background-color: rgb(132, 140, 154); /* Slightly lighter color on hover */
+}
+
+.go-back::before {
+    content: '←'; /* Arrow symbol */
+    display: inline-block;
+    margin-right: 8px;
+}
+
+
+/* Success Message Styles */
+.success-message {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #e8f5e9; /* Light green background */
+    border: 1px solid #c8e6c9; /* Slightly darker green border */
+    color: rgb(27, 39, 53); /* Dark text color to match form */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.success-message p {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+/* Hide navigation bar on this page */
+.main-nav {
+    display: none;
+}
+
+/* Ensure the header is positioned correctly */
+header {
+    position: relative;
+    padding-top: 50px; /* Adjust if needed to prevent overlap with the button */
+}
+
+/* Checkout Container with Shadow */
+.checkout {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* Adding shadow */
+}
+
+/* Heading Styles */
+.checkout h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Product Details Section */
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Space between items */
+    margin-bottom: 30px;
+}
+
+/* Individual Product Item */
+.product-item {
+    flex: 1 1 calc(33.333% - 20px); /* Three items per row with space between */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.product-item:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transform: scale(1.02);
+}
+
+.product-item img {
+    width: 100px; /* Consistent size */
+    height: 100px; /* Consistent size */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-item h2 {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #555;
+    font-family: 'Arial', sans-serif;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Quantity Input */
+.product-item input[type="number"] {
+    width: 60px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Order Summary Section */
+.order-summary {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Checkout Form Section */
+.checkout-form h2 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Full-Width Checkout Button Styling */
+.checkout-button {
+    display: block; /* Change from inline-block to block for full-width */
+    width: 100%; /* Make the button take the full width of its container */
+    padding: 20px 0; /* Adjust padding for a larger height while keeping it full width */
+    font-size: 20px; /* Ensure text is appropriately sized */
+    color: #fff;
+    background-color: rgb(27, 39, 53); /* Button color */
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 30px; /* Space above the button */
+    cursor: pointer;
+    text-align: center; /* Center-align text */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.checkout-button:hover {
+    background-color: rgb(132, 140, 154); /* Hover color */
+    transform: scale(1.05);
+}
+
+.checkout-button:active {
+    background-color: rgb(20, 30, 40); /* Active color */
+    transform: scale(0.98);
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 1 calc(50% - 20px); /* Two items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        flex: 1 1 100%; /* One item per row on small screens */
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever Forward - Contact Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Back Button Styles */
+        .go-back {
+            display: block;
+            margin: 20px auto; /* Center the button horizontally and add vertical space */
+            font-size: 18px;
+            color: #fff; /* Text color for the button */
+            text-decoration: none;
+            background-color: rgb(27, 39, 53); /* Background color to match your button color */
+            padding: 10px 20px;
+            border-radius: 25px; /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center; /* Center text inside the button */
+            width: max-content; /* Adjust button width to fit content */
+        }
+
+        .go-back:hover {
+            background-color: rgb(132, 140, 154); /* Slightly lighter color on hover */
+        }
+
+        .go-back::before {
+            content: '←'; /* Arrow symbol */
+            display: inline-block;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="Forever Forward Logo" class="logo">
+    </header>
+
+    <a href="index.html" class="go-back">Go Back</a> <!-- Back Button -->
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="episodes.html">Episodes</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="merch.html">Store</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="contact-form">
+            <h1>Share your story.</h1>
+            <form action="https://formspree.io/f/mzzpqrwp" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Why do you want to join the show?</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Forever Forward. All rights reserved.</p>
+    </footer>
+</body>
+</html>
